@@ -31,7 +31,7 @@ class IndexPage extends Component {
         {this.state.data.map(n => <article className="message" key={n.id}>
       <div>
         <div>
-          <h2 className="message-header">{n.headline[0].plaintext}<span>{n.lastPublishDateFormatted}</span></h2>
+          <h2 className="message-header">{n.headline[0].plaintext} | {n.byline[0].plaintext}<span>{n.lastPublishDateFormatted}</span></h2>
           {n.content.map(content => <p className="message-body" key={uuidv4()}>{content.plaintext}</p>)}
         </div>
       </div>
