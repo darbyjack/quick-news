@@ -31,14 +31,14 @@ class IndexPage extends Component {
       <div>
         <SEO/>
         {this.state.data.map(n => <article className="message" key={n.id}>
-      <div>
-        <div>
-          <h2 className="message-header">{n.headline[0].plaintext} | {n.byline[0].plaintext}<span>{n.lastPublishDateFormatted}</span></h2>
+        <h2 className="message-header">{n.headline[0].plaintext} | {n.byline[0].plaintext}<span>{n.lastPublishDateFormatted}</span></h2>
           <ul>
-            {n.content.map(content => <li className="message-body" key={uuidv4()}>{content.plaintext}</li>)}
+            {n.content.map((content) => {
+                if (content.plaintext != null) {
+                  return <li className="message-body" key={uuidv4()}>{content.plaintext}</li>
+                }
+            })}
           </ul>
-        </div>
-      </div>
     </article>)}
       </div>
     )
