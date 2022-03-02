@@ -20,6 +20,7 @@
     "gatsby-plugin-sass": "^5.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "sass": "^1.49.9",
     "uuid": "^8.3.2"
   }

@@ -1,8 +1,10 @@
 module.exports = {
-    siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
-    },
-    plugins: [
-      `gatsby-plugin-sass`
-    ]
+  siteMetadata: {
+    title: "Quick News",
+    description: "Load news faster",
+    url: "https://quick-news.pages.dev",
+  },
+  plugins: [
+    `gatsby-plugin-sass`
+  ]
 }

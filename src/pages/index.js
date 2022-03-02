@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import SEO from "../components/seo";
 import "../styles/style.scss"
 const { v4: uuidv4 } = require('uuid');
 
@@ -28,11 +29,14 @@ class IndexPage extends Component {
   render() {
     return (
       <div>
+        <SEO/>
         {this.state.data.map(n => <article className="message" key={n.id}>
       <div>
         <div>
           <h2 className="message-header">{n.headline[0].plaintext} | {n.byline[0].plaintext}<span>{n.lastPublishDateFormatted}</span></h2>
-          {n.content.map(content => <p className="message-body" key={uuidv4()}>{content.plaintext}</p>)}
+          <ul>
+            {n.content.map(content => <li className="message-body" key={uuidv4()}>{content.plaintext}</li>)}
+          </ul>
         </div>
       </div>
     </article>)}
