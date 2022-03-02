@@ -5,6 +5,12 @@ module.exports = {
     url: "https://quick-news.pages.dev",
   },
   plugins: [
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/icon.png',
+      },
+    },
   ]
 }

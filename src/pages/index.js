@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import SEO from "../components/seo";
 import "../styles/style.scss"
 const { v4: uuidv4 } = require('uuid');
+const API_KEY = 'P7LEOCujzt2RqSaWBeImz1spIoLq7dep7x983yQc';
+const QUERY_UUID = 'livestory---PostsWithGraph{"livestory_id":"h_d19c40f762de8e50898598c3eeb552e2","startId":null}---7d1026d349ae6e0fa3a88a88ef90fb476fe11067a8cf1e01b2a1e530f6a02795';
 
 class IndexPage extends Component {
   constructor(props) {
@@ -11,12 +13,13 @@ class IndexPage extends Component {
     };
   }
 
+
   componentDidMount() {
     fetch(`https://data.api.cnn.io/graphql`, {
       method: 'POST',
       headers: {
-          'x-api-key': 'P7LEOCujzt2RqSaWBeImz1spIoLq7dep7x983yQc',
-          'x-graphql-query-uuid': 'livestory---PostsWithGraph{"livestory_id":"h_d19c40f762de8e50898598c3eeb552e2","startId":null}---7d1026d349ae6e0fa3a88a88ef90fb476fe11067a8cf1e01b2a1e530f6a02795'
+          'x-api-key': API_KEY,
+          'x-graphql-query-uuid': QUERY_UUID
       }, 
     })
     .then(response => response.json())
