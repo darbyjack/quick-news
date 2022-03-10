@@ -3,7 +3,7 @@ import SEO from "../components/seo";
 import "../styles/style.scss"
 const { v4: uuidv4 } = require('uuid');
 const API_KEY = 'P7LEOCujzt2RqSaWBeImz1spIoLq7dep7x983yQc';
-const QUERY_UUID = 'livestory---PostsWithGraph{"livestory_id":"h_4ef11d6884ef5519e4b6b8b453666aeb","startId":null}---e8bc08320c888b0b30797653881289ff7bfd309ea6b8aee1069018903e6be735';
+const QUERY_UUID = 'livestory---PostsWithGraph{"livestory_id":"h_956ea53d79b6dc61dda4330614d30918","startId":null}---24d1345d660f4d33c89ff40de7c5e38205212a4e11f206134ce7cf36c6112f2d';
 
 class IndexPage extends Component {
   constructor(props) {
